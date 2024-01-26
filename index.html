@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KSMART EXAMPLE</title>
+  </head>
+  <body>
+    <h1>Relay</h1>
+    <button id="btnon">ON</button>
+    <button id="btnoff">OFF</button>
+
+    <h2>Text</h2>
+    <input type="text" id="mydesc" maxlength="16"><br>
+    <button id="btnsave">SAVE</button>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDdQcUUmk0Eh1rO-jE4yy9jt2GQ6Rktcho",
+        authDomain: "klati-smart.firebaseapp.com",
+        databaseURL: "https://klati-smart-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "klati-smart",
+        storageBucket: "klati-smart.appspot.com",
+        messagingSenderId: "299766895569",
+        appId: "1:299766895569:web:51e11003406102f76806f0",
+        measurementId: "G-S32XV6Q1WT"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      document.getElementById("btnon").onclick = function () {
+        var relaystat = "on";
+        firebase
+          .database()
+          .ref("ksmart01")
+          .update({
+            //   rollNo: rollV,
+            relay: relaystat,
+          });
+        alert("Relay Aktif");
+      };
+
+      document.getElementById("btnoff").onclick = function () {
+        var relaystat = "off";
+        firebase
+          .database()
+          .ref("ksmart01")
+          .update({
+            //   rollNo: rollV,
+            relay: relaystat,
+          });
+        alert("Relay Mati");
+      };
+
+      document.getElementById("btnsave").onclick = function () {
+        var mDesc = document.getElementById("mydesc").value;
+        if (mDesc < 1) {
+          alert("Jangan kosong");
+        } else {
+          firebase
+            .database()
+            .ref("ksmart01")
+            .update({
+              //   rollNo: rollV,
+              desc: mDesc,
+            });
+          alert("Text berhasil diubah");
+        }
+      };
+    </script>
+    
+  </body>
+</html>
