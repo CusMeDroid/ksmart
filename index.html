@@ -22,12 +22,11 @@
       if (!sessionEmail && !sessionUid) {
         window.location.href = "login.html";
       }
-      console.log(sessionUid);
       document.getElementById("btnon").onclick = function () {
         var relaystat = "on";
         firebase
           .database()
-          .ref(sessionUid)
+          .ref("users/"+sessionUid)
           .update({
             relay: relaystat,
           });
@@ -38,7 +37,7 @@
         var relaystat = "off";
         firebase
           .database()
-          .ref(sessionUid)
+          .ref("users/"+sessionUid)
           .update({
             relay: relaystat,
           });
@@ -52,7 +51,7 @@
         } else {
           firebase
             .database()
-            .ref(sessionUid)
+            .ref("users/"+sessionUid)
             .update({
               desc: mDesc,
             });
