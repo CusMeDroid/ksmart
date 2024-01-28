@@ -16,7 +16,11 @@
     <button id="btnsave">Simpan</button>
     
     <script src="js/config/index.js"></script>
+    <script src="js/storage/index.js"></script>
     <script>
+      if (!sessionEmail && !sessionUid) {
+        window.location.href = "login.html";
+      }
       document.getElementById("btnon").onclick = function () {
         var relaystat = "on";
         firebase
