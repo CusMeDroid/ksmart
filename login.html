@@ -34,13 +34,6 @@
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-            firebase
-              .database()
-              .ref("users")
-              .update({
-                email: mEmail_login,
-              });
-            alert("Selamat Datang");
           })
           .catch((error) => {
             var errorCode = error.code;
@@ -62,7 +55,7 @@
             var user = userCredential.user;
             firebase
               .database()
-              .ref("users")
+              .ref("users/"+user.uid)
               .update({
                 email: mEmail_regis,
               });
