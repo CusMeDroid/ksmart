@@ -14,6 +14,7 @@
     <lable>Teks</lable><br>
     <input type="text" id="mydesc" maxlength="16"><br><br>
     <button id="btnsave">Simpan</button>
+    <button id="btnlogout">Keluar</button>
     
     <script src="js/config/index.js"></script>
     <script src="js/storage/index.js"></script>
@@ -57,6 +58,14 @@
           alert("Teks berhasil diubah");
           document.getElementById("mydesc").value="";
         }
+      };
+      document.getElementById("btnlogout").onclick = function () {
+        firebase.auth().signOut().then(() => {
+          localStorage.clear();
+          window.location.href = "";
+        }).catch((error) => {
+          // An error happened.
+        });
       };
     </script>
     
