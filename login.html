@@ -29,7 +29,7 @@
         if (mEmail_login < 1 || mPass_login < 1) {
           alert("Jangan kosong");
         } else {
-          firebase.auth().signInWithEmailAndPassword(email, password)
+          firebase.auth().signInWithEmailAndPassword(mEmail_login, password)
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
@@ -55,15 +55,15 @@
         if (mEmail_regis < 1 || mPass_regis < 1) {
           alert("Jangan kosong");
         } else {
-          firebase.auth().signInWithEmailAndPassword(email, password)
+          firebase.auth().createUserWithEmailAndPassword(mEmail_regis, password)
           .then((userCredential) => {
-            // Signed in
+            // Signed in 
             var user = userCredential.user;
             firebase
               .database()
               .ref("users")
               .update({
-                email: mEmail_login,
+                email: mEmail_regis,
               });
             alert("Selamat Datang");
           })
