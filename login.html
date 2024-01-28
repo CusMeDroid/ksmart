@@ -38,7 +38,7 @@
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-            sessionEmail = mEmail;
+            sessionEmail = mEmail_login;
             localStorage.setItem("email", JSON.stringify(sessionEmail));
             sessionUid = user.uid;
             localStorage.setItem("uid", JSON.stringify(sessionUid));
@@ -72,6 +72,10 @@
                 email: mEmail_regis,
               });
             alert("Selamat Datang");
+            sessionEmail = mEmail_regis;
+            localStorage.setItem("email", JSON.stringify(sessionEmail));
+            sessionUid = user.uid;
+            localStorage.setItem("uid", JSON.stringify(sessionUid));
             window.location.href = "";
           })
           .catch((error) => {
