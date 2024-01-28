@@ -35,6 +35,8 @@
             // Signed in
             var user = userCredential.user;
             alert("Selamat Datang Kembali");
+            document.getElementById("email-login").value="";
+            document.getElementById("pass-login").value="";
           })
           .catch((error) => {
             var errorCode = error.code;
@@ -61,6 +63,8 @@
                 email: mEmail_regis,
               });
             alert("Selamat Datang");
+            document.getElementById("email-regis").value="";
+            document.getElementById("pass-regis").value="";
           })
           .catch((error) => {
             var errorCode = error.code;
