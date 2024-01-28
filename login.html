@@ -30,7 +30,7 @@
         if (mEmail_login < 1 || mPass_login < 1) {
           alert("Jangan kosong");
         } else {
-          firebase.auth().signInWithEmailAndPassword(mEmail_login, password)
+          firebase.auth().signInWithEmailAndPassword(mEmail_login, mPass_login)
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
@@ -56,7 +56,7 @@
         if (mEmail_regis < 1 || mPass_regis < 1) {
           alert("Jangan kosong");
         } else {
-          firebase.auth().createUserWithEmailAndPassword(mEmail_regis, password)
+          firebase.auth().createUserWithEmailAndPassword(mEmail_regis, mPass_regis)
           .then((userCredential) => {
             // Signed in 
             var user = userCredential.user;
