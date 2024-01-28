@@ -1,2 +1,2 @@
-# Halo
-KSMART adalah singkatan dari Klati Smart yang merupakan pengembangan projek antara arduino dengan android studio. Seperti BoT atau IoT.
+# Hello
+KSMART is an abbreviation of Klati Smart which is a development project between Arduino and Android Studio. Like BoT or IoT project that develops remote electrical control.
