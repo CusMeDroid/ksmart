@@ -16,7 +16,7 @@ https://arduino.esp8266.com/stable/package_esp8266com_index.json
 [<img alt="KSmart Reference Board Manage" title="KSmart Reference Board Manage" width="50%" src="Screenshot/ss_001.png" />](Screenshot/ss_001.png)
 
 # Libraries
-Download (KSmart)[https://github.com/CusMeDroid/Arduino] and unzip in Arduino/libraries/KSmart. on sketch include libraries KSmart.
+Download [KSmart](https://github.com/CusMeDroid/Arduino) and unzip in Arduino/libraries/KSmart. on sketch include libraries KSmart.
 
 [<img alt="KSmart Libraries" title="KSmart Libraries" width="50%" src="Screenshot/ss_002.png" />](Screenshot/ss_002.png)
 
