@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="id-ID">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KSMART EXAMPLE</title>
+    <title>KSMART SAKLAR JARAK JAUH</title>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
   </head>
   <body>
-    <h1>Relay</h1>
-    <button id="btnon">ON</button>
-    <button id="btnoff">OFF</button>
+    <h1>Daya</h1>
+    <button id="btnon">Hidup</button>
+    <button id="btnoff">Mati</button>
 
-    <h2>Text</h2>
-    <input type="text" id="mydesc" maxlength="16"><br>
-    <button id="btnsave">SAVE</button>
-
+    <lable>Teks</lable>
+    <input type="text" id="mydesc" maxlength="16"><br><br>
+    <button id="btnsave">Simpan</button>
+    
     <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyDdQcUUmk0Eh1rO-jE4yy9jt2GQ6Rktcho",
-        authDomain: "klati-smart.firebaseapp.com",
-        databaseURL: "https://klati-smart-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "klati-smart",
-        storageBucket: "klati-smart.appspot.com",
-        messagingSenderId: "299766895569",
-        appId: "1:299766895569:web:51e11003406102f76806f0",
-        measurementId: "G-S32XV6Q1WT"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
       document.getElementById("btnon").onclick = function () {
         var relaystat = "on";
         firebase
           .database()
           .ref("ksmart01")
           .update({
-            //   rollNo: rollV,
             relay: relaystat,
           });
-        alert("Relay Aktif");
+        alert("Daya Aktif");
       };
 
       document.getElementById("btnoff").onclick = function () {
@@ -47,10 +33,9 @@
           .database()
           .ref("ksmart01")
           .update({
-            //   rollNo: rollV,
             relay: relaystat,
           });
-        alert("Relay Mati");
+        alert("Daya Mati");
       };
 
       document.getElementById("btnsave").onclick = function () {
@@ -62,10 +47,10 @@
             .database()
             .ref("ksmart01")
             .update({
-              //   rollNo: rollV,
               desc: mDesc,
             });
-          alert("Text berhasil diubah");
+          alert("Teks berhasil diubah");
+          document.getElementById("mydesc").value="";
         }
       };
     </script>
