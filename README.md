@@ -17,5 +17,6 @@ https://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 # Libraries
 Download and unzip KSmart in Arduino/libraries/KSmart. on sketch include libraries KSmart.
+
 [<img alt="KSmart Libraries" title="KSmart Libraries" width="50%" src="Screenshot/ss_002.png" />](Screenshot/ss_002.png)
 
