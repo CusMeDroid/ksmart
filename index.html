@@ -26,7 +26,7 @@
         var relaystat = "on";
         firebase
           .database()
-          .ref("ksmart01")
+          .ref(sessionUid)
           .update({
             relay: relaystat,
           });
@@ -37,7 +37,7 @@
         var relaystat = "off";
         firebase
           .database()
-          .ref("ksmart01")
+          .ref(sessionUid)
           .update({
             relay: relaystat,
           });
@@ -51,7 +51,7 @@
         } else {
           firebase
             .database()
-            .ref("ksmart01")
+            .ref(sessionUid)
             .update({
               desc: mDesc,
             });
@@ -59,6 +59,7 @@
           document.getElementById("mydesc").value="";
         }
       };
+      
       document.getElementById("btnlogout").onclick = function () {
         firebase.auth().signOut().then(() => {
           localStorage.clear();
