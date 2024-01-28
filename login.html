@@ -23,7 +23,11 @@
     <button id="btn-regis">Daftar</button>
 
     <script src="js/config/index.js"></script>
+    <script src="js/storage/index.js"></script>
     <script>
+      if (sessionEmail && sessionUid) {
+        window.location.href = "../";
+      }
       document.getElementById("btn-login").onclick = function () {
         var mEmail_login = document.getElementById("email-login").value;
         var mPass_login = document.getElementById("pass-login").value;
@@ -34,14 +38,19 @@
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
+            sessionEmail = mEmail;
+            localStorage.setItem("email", JSON.stringify(sessionEmail));
+            sessionUid = user.uid;
+            localStorage.setItem("uid", JSON.stringify(sessionUid));
             alert("Selamat Datang Kembali");
-            document.getElementById("email-login").value="";
-            document.getElementById("pass-login").value="";
+            window.location.href = "";
           })
           .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
             alert("Galat! "+errorMessage);
+            document.getElementById("email-login").value="";
+            document.getElementById("pass-login").value="";
           });
         }
       };
@@ -63,13 +72,14 @@
                 email: mEmail_regis,
               });
             alert("Selamat Datang");
-            document.getElementById("email-regis").value="";
-            document.getElementById("pass-regis").value="";
+            window.location.href = "";
           })
           .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
             alert("Galat! "+errorMessage);
+            document.getElementById("email-regis").value="";
+            document.getElementById("pass-regis").value="";
           });
         }
       };
