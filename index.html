@@ -22,6 +22,7 @@
       if (!sessionEmail && !sessionUid) {
         window.location.href = "login.html";
       }
+      console.log(sessionUid);
       document.getElementById("btnon").onclick = function () {
         var relaystat = "on";
         firebase
