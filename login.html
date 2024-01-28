@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KSMART MASUK/DAFTAR</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+  </head>
+  <body>
+    <h1>Masuk</h1>
+    <lable>Email</lable><br>
+    <input type="email" placeholder="E-mail" id="email-login"><br><br>
+    <lable>Kata Sandi</lable><br>
+    <input type="password" placeholder="********" id="pass-login"><br><br>
+    <button id="btn-login">Masuk</button>
+    
+    <h1>Daftar</h1>
+    <lable>Email</lable><br>
+    <input type="email" placeholder="E-mail" id="email-regis"><br><br>
+    <lable>Kata Sandi</lable><br>
+    <input type="password" placeholder="********" id="pass-regis"><br><br>
+    <button id="btn-regis">Daftar</button>
+
+    <script src="js/config/index.js"></script>
+    <script>
+      document.getElementById("btn-login").onclick = function () {
+        var mEmail_login = document.getElementById("email-login").value;
+        var mPass_login = document.getElementById("pass-login").value;
+        if (mEmail_login < 1 || mPass_login < 1) {
+          alert("Jangan kosong");
+        } else {
+          firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // Signed in
+            var user = userCredential.user;
+            firebase
+              .database()
+              .ref("users")
+              .update({
+                email: mEmail_login,
+              });
+            alert("Selamat Datang");
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Galat! "+errorMessage);
+          });
+        }
+      };
+      
+      document.getElementById("btn-regis").onclick = function () {
+        var mEmail_regis = document.getElementById("email-regis").value;
+        var mPass_regis = document.getElementById("pass-regis").value;
+        if (mEmail_regis < 1 || mPass_regis < 1) {
+          alert("Jangan kosong");
+        } else {
+          firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // Signed in
+            var user = userCredential.user;
+            firebase
+              .database()
+              .ref("users")
+              .update({
+                email: mEmail_login,
+              });
+            alert("Selamat Datang");
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Galat! "+errorMessage);
+          });
+        }
+      };
+    </script>
+    
+  </body>
+</html>
