@@ -1,0 +1,336 @@
+/*
+    KSmart Style CSS
+    Copyright 2024 by CusMeDroid
+    DO NOT REMOVE THIS
+    Don't modify or duplicate without our permission, we are law-abiding citizens.
+*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fdfdfd;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #fdfdfd;
+}
+.animate-fading {
+    animation:fading 10s infinite;
+}
+@keyframes fading {
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+.animate-opacity {
+    animation:opac 0.8s;
+}
+@keyframes opac {
+    from{opacity:0;}
+    to{opacity:1;}
+}
+.animate-top {
+    position:relative;animation:animatetop 0.4s;
+}
+@keyframes animatetop {
+    from{top:-300px;opacity:0;}
+    to{top:0;opacity:1;}
+}
+.animate-left {
+    position:relative;
+    animation:animateleft 0.4s;
+}
+@keyframes animateleft {
+    from{left:-300px;opacity:0;}
+    to{left:0;opacity:1;}
+}
+.animate-right {
+    position:relative;animation:animateright 0.4s;
+}
+@keyframes animateright {
+    from{right:-300px;opacity:0;}
+    to{right:0;opacity:1;}
+}
+.animate-bottom {
+    position:relative;animation:animatebottom 0.4s;
+}
+@keyframes animatebottom {
+    from{bottom:-300px;opacity:0;}
+    to{bottom:0;opacity:1;}
+}
+.animate-zoom {
+    animation:animatezoom 0.6s;
+}
+@keyframes animatezoom{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url("../fonts/poppinsregular.ttf");
+}
+
+body {
+    font-family: "PoppinsRegular", sans-serif;
+    margin: 0px;
+    background: white;
+}
+
+h1,h2,h3,h4,h5,p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: darkorange;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: orange;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+}
+
+#laysignup {
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    border-radius: 5px;
+}
+
+.mscard {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+input[type=text], input[type=email], input[type=password], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: darkorange;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+.abtn {
+    cursor: pointer;
+    color: darkorange;
+    transition: 0.4s;
+}
+
+.abtn:hover {
+    color: orange;
+}
+
+.cpage {
+    height: 100%;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#btnmenu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: darkorange;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnmenu:hover {
+    background: orange;
+}
+
+#btnmenuclose {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: darkorange;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnmenuclose:hover {
+    background: orange;
+}
+
+#btnedtdesc {
+    display: none;
+    position: fixed;
+    bottom: 180px;
+    right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnedtdesc:hover{
+    background: whitesmoke;
+}
+
+#btnlogout {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: red;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnlogout:hover {
+    background: darkred;
+}
+
+#btnon {
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnon:hover {
+    background: whitesmoke;
+}
+
+#btnoff {
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: red;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btnoff:hover {
+    background: darkred;
+}
+
+#edtdesk {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #fffffff2;
+}
+
+.edtcard {
+    width: 600px;
+    padding: 20px;
+}
+
+.middle_edt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#btnclose {
+    background: red !important;
+}
+
+#btnclose:hover {
+    background: darkred !important;
+}
+
+footer {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .mscard {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        padding: 16px;
+    }
+    .edtcard {
+        width: 100%;
+        padding: 20px;
+    }
+    .middle_edt {
+        width: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
