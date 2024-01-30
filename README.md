@@ -6,10 +6,9 @@ Add the board url ESP8266, copy paste the url below, add to preferences Arduino.
 ``` txt
 https://arduino.esp8266.com/stable/package_esp8266com_index.json
 ```
-[<img alt="KSmart Reference Board Manage" title="KSmart Reference Board Manage" width="50%" src="https://github.com/CusMeDroid/ksmart/blob/main/Screenshot/ss_001.png" />](https://github.com/CusMeDroid/ksmart/blob/main/Screenshot/ss_001.png)
+[<img alt="KSmart Reference Board Manage" title="KSmart Reference Board Manage" width="50%" src="https://raw.githubusercontent.com/CusMeDroid/ksmart/main/Screenshot/ss_001.png" />](https://raw.githubusercontent.com/CusMeDroid/ksmart/main/Screenshot/ss_001.png)
 
 # Libraries
 Download [KSmart](https://github.com/CusMeDroid/Arduino) and unzip in Arduino/libraries/KSmart. on sketch include libraries KSmart.
 
-[<img alt="KSmart Libraries" title="KSmart Libraries" width="50%" src="https://github.com/CusMeDroid/ksmart/blob/main/Screenshot/ss_002.png" />](https://github.com/CusMeDroid/ksmart/blob/main/Screenshot/ss_002.png)
-
+[<img alt="KSmart Libraries" title="KSmart Libraries" width="50%" src="https://raw.githubusercontent.com/CusMeDroid/ksmart/main/Screenshot/ss_002.png" />](https://raw.githubusercontent.com/CusMeDroid/ksmart/main/Screenshot/ss_002.png)
