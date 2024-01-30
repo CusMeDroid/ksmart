@@ -12,10 +12,7 @@ var refRelay = firebase.database().ref('users/' + sessionUid + '/relay');
 refRelay.on('value', (snapshot) => {
   var dataRelay = snapshot.val();
   // console.log(dataRelay);
-  if (dataRelay == "disable") {
-    document.getElementById("btnon").style.display = "block";
-    document.getElementById("btnoff").style.display = "none";
-  } else if (dataRelay == "on") {
+  if (dataRelay == "on") {
     document.getElementById("btnon").style.display = "none";
     document.getElementById("btnoff").style.display = "block";
     document.getElementById("btnoff").onclick = function () {
@@ -27,19 +24,8 @@ refRelay.on('value', (snapshot) => {
           relay: relaystat,
         });
     };
-  } else if (dataRelay == "off") {
-    document.getElementById("btnon").style.display = "block";
-    document.getElementById("btnoff").style.display = "none";
-    document.getElementById("btnon").onclick = function () {
-      var relaystat = "on";
-      firebase
-        .database()
-        .ref("users/"+sessionUid)
-        .update({
-          relay: relaystat,
-        });
-    };
-  } else {
+  }
+  if (dataRelay == "off") {
     document.getElementById("btnon").style.display = "block";
     document.getElementById("btnoff").style.display = "none";
     document.getElementById("btnon").onclick = function () {
