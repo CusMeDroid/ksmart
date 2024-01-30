@@ -265,6 +265,7 @@ button:hover {
     padding: 18px;
     cursor: pointer;
     transition: 0.4s;
+    z-index: 1;
 }
 
 #btnsys:hover {
@@ -308,7 +309,7 @@ button:hover {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     background: #fffffff2;
 }
 
