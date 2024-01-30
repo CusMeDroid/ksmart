@@ -44,11 +44,17 @@ document.getElementById("btn-regis").onclick = function () {
     .then((userCredential) => {
       // Signed in 
       var user = userCredential.user;
+      var mRelay = "disable";
+      var mTitle = "KSMART";
+      var mDesc = "HELLO, WELLCOME!";
       firebase
         .database()
         .ref("users/"+user.uid)
         .update({
+          desc: mDesc,
           email: mEmail_regis,
+          relay: mRelay,
+          title: mTitle,
         });
       alert("Wellcome!");
       sessionEmail = mEmail_regis;
