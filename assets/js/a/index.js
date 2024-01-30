@@ -68,13 +68,6 @@ document.getElementById("btnsave").onclick = function () {
 
 document.getElementById("btnlogout").onclick = function () {
   firebase.auth().signOut().then(() => {
-    var relaystat = "off";
-    firebase
-      .database()
-      .ref("users/"+sessionUid)
-      .update({
-        relay: relaystat,
-      });
     localStorage.clear();
     window.location.href = "";
   }).catch((error) => {
