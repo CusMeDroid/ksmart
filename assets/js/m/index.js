@@ -11,11 +11,12 @@ document.getElementById("btnmenu").onclick = function () {
     var dataRelay = snapshot.val();
     if (dataRelay == "disable") {
       document.getElementById("btnsys").style.display = "block";
+      document.getElementById("btnedtdesc").style.display = "none";
     } else {
       document.getElementById("btnsys").style.display = "none";
+      document.getElementById("btnedtdesc").style.display = "block";
     }
   });
-  document.getElementById("btnedtdesc").style.display = "block";
   document.getElementById("btnlogout").style.display = "block";
 };
 document.getElementById("btnmenuclose").onclick = function () {
