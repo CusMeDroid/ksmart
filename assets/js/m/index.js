@@ -33,5 +33,5 @@ document.getElementById("btnclose").onclick = function () {
   document.getElementById("edtdesk").style.display = "none";
 };
 document.getElementById("btnsys").onclick = function () {
-  window.location.href = "https://wa.me/6281932671715?text=I'm%20interested%20to%20build%20%20system%20KSMART%20REMOTE%20SWITCH%0A%0ASettings%20Hotspot%0A___________________%0AWIFI_NAME:%0AWIFI_PASS:%0A%0APlease%20configure%20my%20email%20"+sessionEmail;
+  window.location.href = "https://wa.me/6281932671715?text=I'm%20interested%20to%20build%20%20system%20KSMART%20REMOTE%20SWITCH%0A%0ASettings%20Hotspot%0A___________________%0AWIFI_NAME%20:%20%0AWIFI_PASS%20:%20%0A___________________%0A%0APlease%20configure%20my%20email%20"+sessionEmail;
 };
