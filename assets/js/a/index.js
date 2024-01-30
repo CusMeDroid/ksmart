@@ -12,7 +12,10 @@ var refRelay = firebase.database().ref('users/' + sessionUid + '/relay');
 refRelay.on('value', (snapshot) => {
   var dataRelay = snapshot.val();
   // console.log(dataRelay);
-  if (dataRelay == "on") {
+  if (dataRelay == "disable") {
+    document.getElementById("btnon").style.display = "block";
+    document.getElementById("btnoff").style.display = "none";
+  } else if (dataRelay == "on") {
     document.getElementById("btnon").style.display = "none";
     document.getElementById("btnoff").style.display = "block";
     document.getElementById("btnoff").onclick = function () {
