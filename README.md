@@ -2,7 +2,7 @@
 KSMART is an abbreviation of Klati Smart which is a development project between Arduino and Android Studio. Like BoT or IoT project that develops remote electrical control.
 
 # Logo
-[<img alt="KSmart Logo" title="KSmart Logo" width="50%" src="cusmedroid.github.io/ksmart/favicon.ico" />](cusmedroid.github.io/ksmart/favicon.ico)
+[<img alt="KSmart Logo" title="KSmart Logo" width="50%" src="https://cusmedroid.github.io/ksmart/favicon.ico" />](httsp://cusmedroid.github.io/ksmart/favicon.ico)
 
 # Board Manage
 Add the board url ESP8266, copy paste the url below, add to preferences Arduino.
