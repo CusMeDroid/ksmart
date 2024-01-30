@@ -4,7 +4,6 @@
     DO NOT REMOVE THIS
     Don't modify or duplicate without our permission, we are law-abiding citizens.
 */
-import * as firebase from 'firebase/app';
 var firebaseConfig = {
   apiKey: "AIzaSyDdQcUUmk0Eh1rO-jE4yy9jt2GQ6Rktcho",
   authDomain: "klati-smart.firebaseapp.com",
@@ -16,4 +15,3 @@ var firebaseConfig = {
   measurementId: "G-S32XV6Q1WT"
 };
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
